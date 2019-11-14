@@ -1,4 +1,5 @@
 const ADDRESS_ARRAY = [];
+let MAP;
 let MARKERA;
 let MARKERB;
 let POINTS = 5000;
@@ -22,11 +23,11 @@ function playGame(){
 }
 
 function initMap(){
-    map = new google.maps.Map(document.getElementById('map'), {
+    MAP = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 0, lng: 0},
         zoom: 2
       });
-    google.maps.event.addListener(map, 'click', function(event) {
+    google.maps.event.addListener(MAP, 'click', function(event) {
             let latitude = event.latLng.lat();
             let longitude = event.latLng.lng();
             initialize();
@@ -40,7 +41,7 @@ function placeMarker(location) {
     } else {
         MARKERA = new google.maps.Marker({
             position: location, 
-            map: map
+            map: MAP
         });
     }
 
@@ -49,10 +50,10 @@ function placeMarker(location) {
     } else {
         MARKERB = new google.maps.Marker({
             position: {
-                lat: 4.7,
+                lat: -50,
                 lng: -74
             },
-            map: map
+            map: MAP
         })
     }
 }
@@ -110,6 +111,26 @@ function compareCoordinates(){
     console.log(MARKERA.position.lat(), MARKERA.position.lng());
     console.log(MARKERB.position.lat(), MARKERB.position.lng());
 
+    init();
+
+    function init() {
+        var flightPlanCoordinates = [
+          {lat: MARKERA.position.lat(), lng: MARKERA.position.lng()},
+          {lat: MARKERB.position.lat(), lng: MARKERB.position.lng()}
+        ];
+        var flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+
+        flightPath.setMap(MAP);
+      }
+
+
+
     //Get the lat and lng from the random image and the user input
     //Find the distance between both of them
     // Obtain the distance in meters by the computeDistanceBetween method
@@ -134,6 +155,4 @@ function compareCoordinates(){
 //console.log("Distance in Kilometers: ", (distanceInMeters * 0.001));
     //There is a maximum of 5000 points
     //The maximum points gets halved if the distance between the two points is 500
-
-
 }
