@@ -1,35 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="street_view.css">
     <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #pano {
-        height: 35%;
-        width: 35%;
-        margin-top: 5em;
-        margin-left: 5em;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body, div {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+    <style>     
     </style>
   </head>
   <body >
-        <div width="100" height="100" frameborder="2" style="border:0">
-            <div id="pano" width="100" height="100" frameborder="2" style="border:0" >
-            </div>
-            <button id='new-view-button'>New View</button>
-        </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY"
-    async defer></script>
-    <script type="text/javascript" src='street_view.js' defer></script>
+        <div id="pano">
+        </div><br>
+        <button id='new-view-button'>New View</button>
+  <script type="text/javascript" src='street_view.js' ></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkGbD7qHuZq_WyAmnH15854cbm3h5bTlc"></script>
+    
   </body>
 </html>
 

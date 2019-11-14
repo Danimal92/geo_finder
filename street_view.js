@@ -1,5 +1,6 @@
 let geocoder;
 const SUMMARY_DATA = {};
+let CURRENT_ADDRESS;
 
 document.addEventListener('DOMContentLoaded',() => {
     newViewClickListener();
@@ -43,8 +44,8 @@ function TryRandomLocation(callback) {
     console.log('sv',sv)
     sv.getPanorama({
         
-        location: new google.maps.LatLng(lat,lng),
-        radius: 900000,
+        location: {lat: lat, lng: lng},
+        radius: 300000,
         source: google.maps.StreetViewSource.OUTDOOR,
         
 
@@ -58,27 +59,30 @@ function TryRandomLocation(callback) {
         console.log('latitude',latitude)
         let longitude = data.location.latLng.lng()
         console.log('longitude', longitude)
+        let latLng = new google.maps.LatLng(latitude, longitude)
         let panorama = new google.maps.StreetViewPanorama(
             document.getElementById('pano'), {
               
-              visible: false
+              pov: {
+              heading: 34,
+              pitch: 0
+            },
+              visible: false,
+              linksControl: false,
+              disableDefaultUI: true,
+              panControl: true,
+              zoomControl: true,
+              showRoadLabels: false,
+              streetViewControl: false,
+              fullscreenControl: true,
+              addressControl: false,
         });
-
-        panorama.setOptions({
-            disableDefaultUI: true,
-            panControl: true,
-            zoomControl: true,
-            showRoadLabels: false,
-            streetViewControl: true
-        })
-        let latLng = new google.maps.LatLng(latitude, longitude)
         console.log('lat long', latLng)
         panorama.setPano(data.location.pano)
-
-
         panorama.setVisible(true);
         console.log("panorama:",panorama)
-        codeLatLng(latitude, longitude)
+        CURRENT_ADDRESS = codeLatLng(latitude, longitude)
+        console.log(codeLatLng(latitude,longitude))
         SUMMARY_DATA.actual_lat = latitude
         SUMMARY_DATA.actual_lng = longitude
         console.log(SUMMARY_DATA)
