@@ -1,0 +1,28 @@
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+
+html, body {
+    height: 80%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+#pano {
+    margin: auto;
+    float: center;
+    height: 75%;
+    width: 50%;
+  }
+#new-view-button {
+    margin: auto;
+    float: center;
+    
+
+}
