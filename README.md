@@ -12,6 +12,7 @@ Welcome to Geo Finder! The game that drops you somewhere at random in the world,
 
 - Clone down the repository
 - Open the terminal and cd into the backend folder
+- Bundle install with *bundle install*
 - Open rails server with *rails s* command
 - cd into frontend folder
 - Copy path of index.html file
