@@ -3,6 +3,7 @@ class SummariesController < ApplicationController
     def index
         summaries = Summary.all
         render :json => summaries
+    
     end
 
     def show

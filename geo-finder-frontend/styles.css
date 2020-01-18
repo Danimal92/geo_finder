@@ -69,12 +69,15 @@ html, body {
 }
 
 #map {
+    margin: auto;
     display: block;
     height: 30%;
-    width: 60%;
+    width: 50%;
     position: absolute;
     left: 100px;
     bottom: 0px;
+    margin-bottom: 2em;
+    margin-left: 20em;
 }
 
 #skip {
@@ -104,3 +107,4 @@ html, body {
 #submit-button{
     display:none;
 }
+

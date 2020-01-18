@@ -4,4 +4,5 @@ class User < ApplicationRecord
     # validates :email, presence: true
     # validates :email, format: /@/
     # validates :email, uniqueness: true
+    
 end

@@ -34,6 +34,7 @@ function initialize(latitude, longitude) {
 
 function codeLatitudeLng(lat, lng) {
     console.log("4: codeLatLng")
+    console.log('actualMap.js')
     let latlng = new google.maps.LatLng(lat, lng);
     geocoder.geocode({
       'latLng': latlng
@@ -43,7 +44,7 @@ function codeLatitudeLng(lat, lng) {
           let address = results[1].formatted_address;
           ADDRESS_ARRAY = address
           
-          console.log(ADDRESS_ARRAY);
+          console.log("Address Array: ",ADDRESS_ARRAY);
           LATA = lat;
           LNGA = lng;
         }

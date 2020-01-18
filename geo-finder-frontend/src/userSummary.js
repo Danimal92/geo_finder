@@ -43,6 +43,7 @@ function viewAndDeleteSummary(summaries){
 }
 
 function displaySummaryDivDOM(summariesArray){
+        console.log('summariesArray',summariesArray)
         let displaySummaryDiv = document.getElementById("display-Summary")
         let summaryOl = document.getElementById("summaries-ol")
         if (summariesArray.length === 0){
@@ -92,6 +93,7 @@ function deleteUserPoints(){
 }
 
 function addSummaryInDatabase(summary_data){
+    console.log("POST fetch", summary_data.input_lat, summary_data.input_lng, summary_data.actual_lat, summary_data.actual_lng, summary_data.points)
     fetch(SUMMARIES_URL, {
         method: "POST",
         headers: {
@@ -104,7 +106,8 @@ function addSummaryInDatabase(summary_data){
             input_lng: summary_data.input_lng,
             actual_lat: summary_data.actual_lat,
             actual_lng: summary_data.actual_lng,
-            points: summary_data.points
+            points: summary_data.points,
+
         })
       })
       .then(response => response.json())

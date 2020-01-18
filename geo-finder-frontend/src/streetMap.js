@@ -1,9 +1,10 @@
 let GEO_CODER;
-const SUMMARY_DATA = {};
+let SUMMARY_DATA = {};
 let PANO_ID;
 
 function codeLatLng(lat, lng) {
     GEO_CODER = new google.maps.Geocoder();
+    console.log('streetMap.js')
     let latlng = new google.maps.LatLng(lat, lng);
     GEO_CODER.geocode({
       'latLng': latlng
