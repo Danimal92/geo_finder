@@ -1,6 +1,6 @@
 ## Geo Finder
 
-Welcome to Geo Finder! The game that drops you somewhere at random in the world, leaving you to figure out where based on the environment, biome, signs, language, and whatever else you can find! 
+Welcome to Geo Finder! The game that drops you somewhere at random in the world, leaving you to figure out where you are based on the environment, biome, signs, language, and whatever else you can find! 
 
 # Features
 
