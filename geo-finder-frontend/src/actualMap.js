@@ -40,8 +40,10 @@ function codeLatitudeLng(lat, lng) {
       'latLng': latlng
     }, function (results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
-        if (results[1]) {
-          let address = results[1].formatted_address;
+        if (results[0]) {
+          let address = results[0].formatted_address;
+          SUMMARY_DATA.guessed_address = address
+          console.log('SUPPOSEDLY GUESSED ADDRESS', SUMMARY_DATA.guessed_address)
           ADDRESS_ARRAY = address
           
           console.log("Address Array: ",ADDRESS_ARRAY);

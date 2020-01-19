@@ -89,7 +89,7 @@ function TryRandomLocation(callback) {
         console.log(codeLatLng(latitude,longitude))
         SUMMARY_DATA.actual_lat = latitude
         SUMMARY_DATA.actual_lng = longitude
-        console.log(SUMMARY_DATA)
+        console.log('',SUMMARY_DATA)
 
       } else {
         console.log('5')

@@ -58,7 +58,7 @@ function displaySummaryDivDOM(summariesArray){
                 let summaryLi = document.createElement("li")
                 summaryLi.classList = "summaries"
                 let summaryP = document.createElement("p")
-                summaryP.innerHTML = `Guessed:${summary.guessedAddress}, Actual Address: , Points Earned: ${summary.points}`
+                summaryP.innerHTML = `Guessed:${summary.guessed_address}, Actual Address: ${summary.actual_address} , Points Earned: ${summary.points}`
                 summaryLi.append(summaryP)
                 summaryOl.prepend(summaryLi)
             });
@@ -107,6 +107,8 @@ function addSummaryInDatabase(summary_data){
             actual_lat: summary_data.actual_lat,
             actual_lng: summary_data.actual_lng,
             points: summary_data.points,
+            guessed_address: summary_data.guessed_address,
+            actual_address: summary_data.actual_address
 
         })
       })

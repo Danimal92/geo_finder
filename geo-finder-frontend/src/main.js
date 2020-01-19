@@ -41,7 +41,7 @@ function userLogout(){
     let logout = document.getElementById("logout");
     logout.addEventListener("click", (ev) => {
         ev.preventDefault();
-        hideEachDisplay(["after-login", "after-login-navbar"])
+        hideEachDisplay(['map', 'pano',"after-login", "after-login-navbar"])
         onlyDisplay(["before-login"])
     } )
 }
@@ -74,6 +74,9 @@ function nextMapButton(){
         refreshThePageWithNewStreetMap();
         document.getElementById('submit-button').style.display ="none";
         MARKERA = null
+        MARKERB = null
+        SUMMARY_DATA = {}
+        
     })
 }
 

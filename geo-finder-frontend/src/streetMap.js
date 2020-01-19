@@ -11,9 +11,9 @@ function codeLatLng(lat, lng) {
     },
     function (results, status) {
         if (status === google.maps.GeocoderStatus.OK) {
-            if (results[1]) {
-                let address = results[1].formatted_address;
-                // console.log(address);
+            if (results[0]) {
+                console.log('THIS IS THE GEOCODED ADDRESS',results[0].formatted_address)
+                SUMMARY_DATA.actual_address = results[0].formatted_address
             } 
         }
     });
@@ -66,7 +66,9 @@ function TryRandomLocation(callback) {
         PANO_ID = data.location.pano
         panorama.setVisible(true);
         // console.log("panorama:",panorama)
-        codeLatLng(latitude, longitude)
+        SUMMARY_DATA.actual_address = codeLatLng(latitude, longitude)
+        console.log(codeLatLng(latitude, longitude))
+        console.log('THIS IS THE ACTUAL ADDRESS MAYBE?', SUMMARY_DATA.actual_address)
         SUMMARY_DATA.actual_lat = latitude
         SUMMARY_DATA.actual_lng = longitude
         // console.log(SUMMARY_DATA)
