@@ -12,7 +12,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 
 
 html, body {
-    background-color: #CCFFFF;
+    background-color: #d4d4b6;
     height: 100%;
     width:100%;
     margin: 0;
@@ -20,21 +20,33 @@ html, body {
   }
 
 .header {
-    padding: 5px;
+    padding: 1px;
     text-align: center;
-    background: #1abc9c;
-    color: white;
+    background: #634788;
+    color: #ffffffbd;
     font-size: 20px;
+    
 }
 
 #pano {
     display: block;
     margin: auto;
     float: center;
-    height: 55%;
-    width: 50%;
+    height: 40%;
+    width: 70%;
   }
 
+  .container {
+
+    display: flex;
+
+  }
+
+#welcome{
+
+    float: top;
+
+}
 
 #before-login {
     display:block;
@@ -43,10 +55,14 @@ html, body {
     display:none;
 }
 .nav-bar {
-    display:inline-block
+    display:inline-block;
 }
 .nav-content {
+    float: center;
     display:inline-block;
+    font-size: 18px;
+    margin-right: 5%;
+    padding: 10px;
 }
 
 .sign-in-user, .sign-up-user {
@@ -64,6 +80,35 @@ html, body {
     display:none;
 }
 
+#display-start{
+
+    margin: auto;
+    margin-top: 20%;
+    box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+
+}
+
+#display-start:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+
+#display-start:active {
+	position:relative;
+	top:1px;
+}
+
 #user, #sign-in{
     display:inline-block
 }
@@ -71,13 +116,10 @@ html, body {
 #map {
     margin: auto;
     display: block;
-    height: 30%;
-    width: 50%;
-    position: absolute;
-    left: 100px;
-    bottom: 0px;
-    margin-bottom: 2em;
-    margin-left: 20em;
+    margin: auto;
+    float: center;
+    height: 35%;
+    width: 70%;
 }
 
 #skip {
@@ -90,12 +132,9 @@ html, body {
     border: 3px solid #73AD21;
 }
 #mapPageButtons {
-    position: absolute;
-    right: 0px;
-    font-size: 25px;
-    width: 200px;
-    height: 100px;
-    border: 3px solid #73AD21;
+    margin:auto;
+    float:center;
+    text-align: center;
 }
 
 #answer{
@@ -108,3 +147,8 @@ html, body {
     display:none;
 }
 
+#skip-button, #submit-button{
+    margin:auto;
+    float:center;
+    text-align: center;
+}

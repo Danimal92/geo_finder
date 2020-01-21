@@ -41,7 +41,7 @@ function userLogout(){
     let logout = document.getElementById("logout");
     logout.addEventListener("click", (ev) => {
         ev.preventDefault();
-        hideEachDisplay(['map', 'pano',"after-login", "after-login-navbar"])
+        hideEachDisplay(['map', 'pano',"after-login", "after-login-navbar", 'mapPageButtons'])
         onlyDisplay(["before-login"])
     } )
 }

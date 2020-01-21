@@ -17,24 +17,27 @@
   <body>
     <header class="header">
       <div id="nav-bar">
-        <div class="nav-content">
-            <h3 id="geoFinder">GeoFinder</h3>
+        <div class="title">
+            <p id="geoFinder">GeoFinder</p>
         </div>
         <div id="after-login-navbar">
+                    
+            <div class="nav-content" id='welcome'></div>
+            
             <div class="nav-content">
-                <div id="play">|| play ||</div>
+                <button id="play">Play</button>
+            </div>
+            <!-- <div class="nav-content">
+                <div id="user">User</div>
+            </div> -->
+            <div class="nav-content">
+                <button id="summary">History</button>
             </div>
             <div class="nav-content">
-                <div id="user">User</div>
+                <button id="logout">Logout</button>
             </div>
             <div class="nav-content">
                 <div id="points">Points</div>
-            </div>
-            <div class="nav-content">
-                <div id="summary">|| Summary ||</div>
-            </div>
-            <div class="nav-content">
-                <div id="logout">|| Logout ||</div>
             </div>
         </div>
       </div>
@@ -59,26 +62,32 @@
         </div>
         
         <div id="after-login">
-            <div id="display-start">
+            <button id="display-start">
                 <div>Start</div>
-            </div>
+            </button>
             <div id="display-Summary">
-                <button id="summary-delete-button">Clear Summary</button>
-                <div id="summaryDiv" style="display: none;">Summary Deleted!</div>
+                <button id="summary-delete-button">Clear History</button>
+                <div id="summaryDiv" style="display: none;">History Deleted!</div>
                 <ol id="summaries-ol">
 
                 </ol>
             </div>
         </div>
     </main>
+
+   
+    
     
     <div id="pano"></div>
-
+    
     <div id="map"></div>
-    <div id="answer"></div>
     <div id="mapPageButtons">
-        <button id='submit-button' style="bottom: 40px;">Submit</button>
-        <button id='skip-button' style="bottom: 30px;">Next</button>
+        <button id='skip-button'>Next</button>
+        <button id='submit-button'>Submit</button>
     </div>
+    
+
+    <div id="answer"></div>
+    
   </body>
 </html>

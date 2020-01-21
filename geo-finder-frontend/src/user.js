@@ -42,12 +42,12 @@ function afterLogIn(user){
 }
 
 function displayUsername(user){
-    let displayedUser = document.getElementById("user")
-    displayedUser.textContent = `|| ${user.email} ||`
+    let displayedUser = document.getElementById("welcome")
+    displayedUser.textContent = `Welcome, ${user.email}`
 }
 function displayedUserPoints(user){
     let displayedUserPoints = document.getElementById("points")
-    displayedUserPoints.textContent = `|| Points:${T_POINTS} ||`
+    displayedUserPoints.textContent = `Points:${T_POINTS}`
 }
 
 function createNewUserFetchRequest(){

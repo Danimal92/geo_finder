@@ -74,6 +74,7 @@ function compareCoordinates(){
     console.log("6: compareCoordinates")
     let answerDiv = document.getElementById('answer');
     answerDiv.style.display = "block"
+    answerDiv.style.marginRight = '20%'
     let answerP = document.createElement('p');
     answerP.textContent = "Your guess is in " + ADDRESS_ARRAY;
     setTimeout(function(){ answerDiv.style.display = "none"}, 7000);
