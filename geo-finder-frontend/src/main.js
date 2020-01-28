@@ -32,8 +32,13 @@ function hideEachDisplay(array){
 
 function onlyDisplay(array){
     array.forEach(id => {
+        
         let domContentId = document.getElementById(id)
+        if(id==='submit-button' || id ==='skip-button'){
+            domContentId.style.display = "inline-block"
+        }
         domContentId.style.display = "block"
+        
     })
 }
 

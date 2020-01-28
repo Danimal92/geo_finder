@@ -26512,3 +26512,463 @@ Processing by UsersController#getUserByEmail as
 Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 1.5ms | Allocations: 9638)
 
 
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:41:18 -0800
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:41:18 -0800
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:41:18 -0800
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:41:18 -0800
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:41:18 -0800
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (58.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#getUserByEmail as 
+  [1m[35m (57.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (59.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (31.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  [1m[36mUser Load (32.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  [1m[36mUser Load (33.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  [1m[36mUser Load (32.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+  [1m[36mUser Load (33.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (4.3ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mSummary Load (5.0ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (5.5ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mSummary Load (7.9ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mSummary Load (6.9ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (153.25ms)
+Completed 200 OK in 391ms (Views: 114.3ms | ActiveRecord: 224.9ms | Allocations: 34738)
+
+
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (128.3ms)
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (179.54ms)
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (234.09ms)
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (123.22ms)
+Completed 200 OK in 429ms (Views: 58.9ms | ActiveRecord: 321.1ms | Allocations: 64852)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:41:19 -0800
+Completed 200 OK in 387ms (Views: 41.8ms | ActiveRecord: 374.1ms | Allocations: 62950)
+
+
+Completed 200 OK in 428ms (Views: 165.1ms | ActiveRecord: 209.0ms | Allocations: 64730)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:41:19 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+Completed 200 OK in 429ms (Views: 76.9ms | ActiveRecord: 301.6ms | Allocations: 65553)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:41:19 -0800
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (21.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  [1m[36mUser Load (18.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSummary Load (21.1ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (37.19ms)
+Completed 200 OK in 50ms (Views: 17.1ms | ActiveRecord: 26.9ms | Allocations: 12664)
+
+
+[active_model_serializers]   [1m[36mSummary Load (12.5ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (26.63ms)
+[active_model_serializers]   [1m[36mSummary Load (24.4ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (48.57ms)
+Completed 200 OK in 73ms (Views: 24.7ms | ActiveRecord: 43.2ms | Allocations: 28219)
+
+
+Completed 200 OK in 54ms (Views: 15.1ms | ActiveRecord: 34.3ms | Allocations: 19928)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:41:19 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (1.1ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (19.94ms)
+Completed 200 OK in 25ms (Views: 20.0ms | ActiveRecord: 1.7ms | Allocations: 9648)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:45:44 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (4.2ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (27.44ms)
+Completed 200 OK in 32ms (Views: 24.4ms | ActiveRecord: 4.9ms | Allocations: 9638)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:45:48 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (29.2ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (55.03ms)
+Completed 200 OK in 67ms (Views: 26.7ms | ActiveRecord: 36.8ms | Allocations: 9638)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:45:48 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (25.2ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (42.59ms)
+Completed 200 OK in 45ms (Views: 17.9ms | ActiveRecord: 25.5ms | Allocations: 9638)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:45:48 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (0.7ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.54ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 1.0ms | Allocations: 9638)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:48:48 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (25.0ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (40.25ms)
+Completed 200 OK in 57ms (Views: 15.9ms | ActiveRecord: 26.3ms | Allocations: 9641)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:49:31 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (0.8ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.2ms)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 1.2ms | Allocations: 9638)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:49:36 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (0.7ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.8ms)
+Completed 200 OK in 23ms (Views: 15.8ms | ActiveRecord: 5.3ms | Allocations: 9638)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:57:30 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (3.8ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (36.85ms)
+Completed 200 OK in 52ms (Views: 34.3ms | ActiveRecord: 9.3ms | Allocations: 9774)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:58:16 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (1.2ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.27ms)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 1.7ms | Allocations: 9638)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:59:30 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (1.0ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (50.98ms)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 1.7ms | Allocations: 9642)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 17:59:51 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (21.5ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (39.21ms)
+Completed 200 OK in 42ms (Views: 18.4ms | ActiveRecord: 22.0ms | Allocations: 9638)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 18:00:23 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (1.2ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.59ms)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 1.6ms | Allocations: 9638)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 18:03:09 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (24.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (1.3ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.84ms)
+Completed 200 OK in 44ms (Views: 14.4ms | ActiveRecord: 26.0ms | Allocations: 9638)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 18:04:30 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (25.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (1.0ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.01ms)
+Completed 200 OK in 44ms (Views: 15.8ms | ActiveRecord: 26.1ms | Allocations: 9638)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 18:04:43 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (1.3ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (25.33ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 1.8ms | Allocations: 9641)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 18:05:35 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (1.0ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.5ms)
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 1.7ms | Allocations: 9638)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 18:06:00 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (1.5ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (17.88ms)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 2.0ms | Allocations: 9638)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 18:07:16 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (0.8ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.09ms)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 1.3ms | Allocations: 9638)
+
+
+Started POST "/summaries" for ::1 at 2020-01-27 18:08:45 -0800
+Processing by SummariesController#create as 
+  Parameters: {"user_id"=>1, "input_lat"=>11.493482499076944, "input_lng"=>19.86328125, "actual_lat"=>-33.29892446885203, "actual_lng"=>146.3672169413659, "points"=>4, "guessed_address"=>"Aboudeia, Chad", "actual_address"=>"69 Foster St, Lake Cargelligo NSW 2672, Australia", "summary"=>{"points"=>4, "input_lat"=>11.493482499076944, "input_lng"=>19.86328125, "actual_lat"=>-33.29892446885203, "actual_lng"=>146.3672169413659, "guessed_address"=>"Aboudeia, Chad", "actual_address"=>"69 Foster St, Lake Cargelligo NSW 2672, Australia", "user_id"=>1}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summaries_controller.rb:21:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[35m (264.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[36mSummary Create (161.3ms)[0m  [1m[32mINSERT INTO "summaries" ("points", "input_lat", "input_lng", "actual_lat", "actual_lng", "guessed_address", "actual_address", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["points", 4], ["input_lat", 11.493482499076944], ["input_lng", 19.86328125], ["actual_lat", -33.29892446885203], ["actual_lng", 146.3672169413659], ["guessed_address", "Aboudeia, Chad"], ["actual_address", "69 Foster St, Lake Cargelligo NSW 2672, Australia"], ["user_id", 1], ["created_at", "2020-01-28 02:08:45.390768"], ["updated_at", "2020-01-28 02:08:45.390768"]]
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[35m (106.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[35m (25.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summaries_controller.rb:24:in `create'
+  [1m[36mUser Update (3.1ms)[0m  [1m[33mUPDATE "users" SET "points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["points", 348], ["updated_at", "2020-01-28 02:08:45.929242"], ["id", 1]]
+  ↳ app/controllers/summaries_controller.rb:24:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summaries_controller.rb:24:in `create'
+[active_model_serializers] Rendered SummarySerializer with ActiveModelSerializers::Adapter::Attributes (1.88ms)
+Completed 200 OK in 632ms (Views: 8.3ms | ActiveRecord: 560.9ms | Allocations: 7104)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 18:08:45 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (4.6ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (21.68ms)
+Completed 200 OK in 29ms (Views: 17.7ms | ActiveRecord: 9.0ms | Allocations: 9810)
+
+
+Started POST "/summaries" for ::1 at 2020-01-27 18:09:05 -0800
+Processing by SummariesController#create as 
+  Parameters: {"user_id"=>1, "input_lat"=>1.0244205126966455, "input_lng"=>-44.12109375, "actual_lat"=>26.86246891682478, "actual_lng"=>75.8087131133683, "points"=>4, "guessed_address"=>"Atlantic Ocean", "actual_address"=>"Jaria Rd, Naya Bass, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan 302017, India", "summary"=>{"points"=>4, "input_lat"=>1.0244205126966455, "input_lng"=>-44.12109375, "actual_lat"=>26.86246891682478, "actual_lng"=>75.8087131133683, "guessed_address"=>"Atlantic Ocean", "actual_address"=>"Jaria Rd, Naya Bass, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan 302017, India", "user_id"=>1}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summaries_controller.rb:21:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[35m (45.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[36mSummary Create (428.4ms)[0m  [1m[32mINSERT INTO "summaries" ("points", "input_lat", "input_lng", "actual_lat", "actual_lng", "guessed_address", "actual_address", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["points", 4], ["input_lat", 1.0244205126966455], ["input_lng", -44.12109375], ["actual_lat", 26.86246891682478], ["actual_lng", 75.8087131133683], ["guessed_address", "Atlantic Ocean"], ["actual_address", "Jaria Rd, Naya Bass, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan 302017, India"], ["user_id", 1], ["created_at", "2020-01-28 02:09:05.479085"], ["updated_at", "2020-01-28 02:09:05.479085"]]
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summaries_controller.rb:24:in `create'
+  [1m[36mUser Update (97.6ms)[0m  [1m[33mUPDATE "users" SET "points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["points", 352], ["updated_at", "2020-01-28 02:09:05.959679"], ["id", 1]]
+  ↳ app/controllers/summaries_controller.rb:24:in `create'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summaries_controller.rb:24:in `create'
+[active_model_serializers] Rendered SummarySerializer with ActiveModelSerializers::Adapter::Attributes (0.84ms)
+Completed 200 OK in 609ms (Views: 1.7ms | ActiveRecord: 575.5ms | Allocations: 6173)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 18:09:06 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (29.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (1.7ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (23.12ms)
+Completed 200 OK in 56ms (Views: 22.4ms | ActiveRecord: 31.6ms | Allocations: 9982)
+
+
+Started POST "/summaries" for ::1 at 2020-01-27 18:09:32 -0800
+Processing by SummariesController#create as 
+  Parameters: {"user_id"=>1, "input_lat"=>9.07226352747096, "input_lng"=>17.40234375, "actual_lat"=>-31.89923533755599, "actual_lng"=>127.0200099509704, "points"=>4, "guessed_address"=>"Mandoul Oriental, Chad", "actual_address"=>"National Highway 1, Madura WA 6443, Australia", "summary"=>{"points"=>4, "input_lat"=>9.07226352747096, "input_lng"=>17.40234375, "actual_lat"=>-31.89923533755599, "actual_lng"=>127.0200099509704, "guessed_address"=>"Mandoul Oriental, Chad", "actual_address"=>"National Highway 1, Madura WA 6443, Australia", "user_id"=>1}}
+  [1m[36mUser Load (29.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summaries_controller.rb:21:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[35m (39.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[36mSummary Create (5.7ms)[0m  [1m[32mINSERT INTO "summaries" ("points", "input_lat", "input_lng", "actual_lat", "actual_lng", "guessed_address", "actual_address", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["points", 4], ["input_lat", 9.07226352747096], ["input_lng", 17.40234375], ["actual_lat", -31.89923533755599], ["actual_lng", 127.0200099509704], ["guessed_address", "Mandoul Oriental, Chad"], ["actual_address", "National Highway 1, Madura WA 6443, Australia"], ["user_id", 1], ["created_at", "2020-01-28 02:09:33.016074"], ["updated_at", "2020-01-28 02:09:33.016074"]]
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summaries_controller.rb:24:in `create'
+  [1m[36mUser Update (3.7ms)[0m  [1m[33mUPDATE "users" SET "points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["points", 356], ["updated_at", "2020-01-28 02:09:33.070979"], ["id", 1]]
+  ↳ app/controllers/summaries_controller.rb:24:in `create'
+  [1m[35m (37.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summaries_controller.rb:24:in `create'
+[active_model_serializers] Rendered SummarySerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+Completed 200 OK in 138ms (Views: 1.3ms | ActiveRecord: 118.8ms | Allocations: 6169)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 18:09:33 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (40.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (1.2ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (24.39ms)
+Completed 200 OK in 68ms (Views: 24.0ms | ActiveRecord: 41.7ms | Allocations: 10154)
+
+
+Started POST "/summaries" for ::1 at 2020-01-27 18:09:38 -0800
+Processing by SummariesController#create as 
+  Parameters: {"user_id"=>1, "input_lat"=>4.535356380895779, "input_lng"=>104.23828125, "actual_lat"=>-31.89923533755599, "actual_lng"=>127.0200099509704, "points"=>2, "guessed_address"=>"Mandoul Oriental, Chad", "actual_address"=>"National Highway 1, Madura WA 6443, Australia", "summary"=>{"points"=>2, "input_lat"=>4.535356380895779, "input_lng"=>104.23828125, "actual_lat"=>-31.89923533755599, "actual_lng"=>127.0200099509704, "guessed_address"=>"Mandoul Oriental, Chad", "actual_address"=>"National Highway 1, Madura WA 6443, Australia", "user_id"=>1}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summaries_controller.rb:21:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[36mSummary Create (5.0ms)[0m  [1m[32mINSERT INTO "summaries" ("points", "input_lat", "input_lng", "actual_lat", "actual_lng", "guessed_address", "actual_address", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["points", 2], ["input_lat", 4.535356380895779], ["input_lng", 104.23828125], ["actual_lat", -31.89923533755599], ["actual_lng", 127.0200099509704], ["guessed_address", "Mandoul Oriental, Chad"], ["actual_address", "National Highway 1, Madura WA 6443, Australia"], ["user_id", 1], ["created_at", "2020-01-28 02:09:38.963130"], ["updated_at", "2020-01-28 02:09:38.963130"]]
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summaries_controller.rb:22:in `create'
+  [1m[35m (28.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/summaries_controller.rb:24:in `create'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["points", 358], ["updated_at", "2020-01-28 02:09:38.976905"], ["id", 1]]
+  ↳ app/controllers/summaries_controller.rb:24:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/summaries_controller.rb:24:in `create'
+[active_model_serializers] Rendered SummarySerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 200 OK in 56ms (Views: 1.2ms | ActiveRecord: 39.2ms | Allocations: 6167)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 18:09:39 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (4.3ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (28.23ms)
+Completed 200 OK in 31ms (Views: 24.6ms | ActiveRecord: 4.8ms | Allocations: 10326)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 18:09:44 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (0.7ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (23.4ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 1.0ms | Allocations: 10329)
+
+
+Started POST "/getUserByEmail" for ::1 at 2020-01-27 18:10:06 -0800
+Processing by UsersController#getUserByEmail as 
+  Parameters: {"email"=>"t", "user"=>{"email"=>"t"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `getUserByEmail'
+[active_model_serializers]   [1m[36mSummary Load (0.8ms)[0m  [1m[34mSELECT "summaries".* FROM "summaries" WHERE "summaries"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `getUserByEmail'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.78ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 1.2ms | Allocations: 10326)
+
+
