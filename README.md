@@ -19,3 +19,6 @@ Welcome to Geo Finder! The game that drops you somewhere at random in the world,
 - Open browser and go to index.html path  
 - Register/Login and hit start! 
 - Enjoy!
+
+
+
