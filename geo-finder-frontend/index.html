@@ -2,92 +2,180 @@
 <html lang="en" dir="ltr">
   <head>
     <title>Geo Finder</title>
-    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <script src="./src/index.js"></script>
     <script src="./src/user.js"></script>
     <script src="./src/main.js"></script>
     <script src="./src/userSummary.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY" async defer></script>
-    <script src="./src/actualMap.js" ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkGbD7qHuZq_WyAmnH15854cbm3h5bTlc"
+      async
+      defer
+    ></script>
+    <script src="./src/actualMap.js"></script>
     <script src="./src/streetMap.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
-    <header class="header">
-      <div id="nav-bar">
-        <div class="title">
-            <p id="geoFinder">GeoFinder</p>
-        </div>
-        <div id="after-login-navbar">
-                    
-            <div class="nav-content" id='welcome'></div>
-            
-            <div class="nav-content">
-                <button id="play">Play</button>
+    
+    <nav
+      class="navbar navbar-expand-lg navbar-light">
+      <div id="after-login-navbar" class="container">
+        
+        <button
+          class="navbar-toggler"
+          type='button'
+          data-toggle="collapse"
+          data-target="#mainNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="mainNav" class="collapse navbar-collapse">
+          <div class="navbar-nav">
+            <div id="welcome" class="navbar-brand"></div>
+
+            <div>
+              <a id="play" class="nav-item nav-link" href="#">Play</a>
             </div>
-            <!-- <div class="nav-content">
-                <div id="user">User</div>
-            </div> -->
-            <div class="nav-content">
-                <button id="summary">History</button>
+            <div>
+              <a id="summary" class="nav-item nav-link" href="#">History</a>
             </div>
-            <div class="nav-content">
-                <button id="logout">Logout</button>
+            <div>
+              <a id="logout" class="nav-item nav-link" href="#">Logout</a>
             </div>
-            <div class="nav-content">
-                <div id="points">Points</div>
+            <div>
+              <div id="points" class="nav-item nav-link" href="#">Points</div>
             </div>
+            <a class="nav-item nav-link" data-toggle="modal" data-target="#aboutModal" href="#">
+              About
+            </a>
+          </div>
+          <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="aboutModalLabel">About GeoFinder</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  GeoFinder is a game where you are dropped in a random place in the world, and you need to guess where you are!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
-
-    <main id="display-pane">
-        <div id="before-login">
-            <div class="sign-in-user">
-                <div class="usercontent">sign-in</div>
-                <form id="sign-in-form">
-                    <input type="text" name="email" placeholder="email" id="sign-in-input" />
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-            <div class="sign-up-user">
-                <div class="usercontent">sign-up</div>
-                <form id="sign-up-form">
-                    <input type="text" name="email" placeholder="email" id="sign-up-input" />
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
+    </nav>
+    <div class="container">
+      <button id="display-start" class="btn btn-primary">
+        <div>Start</div>
+      </button>
+    </div>
+    <div id="mapPageButtons" class="container">
+      <div class="row">
+        <div class="col">
+          <button id="skip-button" class="btn btn-warning">Next</button>
         </div>
-        
-        <div id="after-login">
-            <button id="display-start">
-                <div>Start</div>
-            </button>
-            <div id="display-Summary">
-                <button id="summary-delete-button">Clear History</button>
-                <div id="summaryDiv" style="display: none;">History Deleted!</div>
-                <ol id="summaries-ol">
-
-                </ol>
-            </div>
+        <div class="col">
+          <button id="submit-button" class="btn btn-success">Submit</button>
         </div>
-    </main>
+      </div>
+    </div>
+  
 
-   
-    
-    
-    <div id="pano"></div>
-    
-    <div id="map"></div>
-    <div id="mapPageButtons">
-        <button id='skip-button'>Next</button>
-        <button id='submit-button'>Submit</button>
+    <div id="display-pane" class="container">
+      <div id="before-login">
+        <div class="jumbotron">
+          <div class="container">
+            <h1 class="display-4">GeoFinder</h1>
+            <p class="lead">Guess where you are in the world!</p>
+          </div>
+        </div>
+        <div >
+          <div class="sign-in-user">
+            <form id="sign-in-form">
+              <div class="form-group">
+                <label for="sign-in-form">Login</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  placeholder="email"
+                  id="sign-in-input"
+                />
+                <input class="form-control" type="submit" value="Submit" />
+              </div>
+            </form>
+          </div>
+          <div class="sign-up-user">
+            <div class="form-group">
+              <form id="sign-up-form">
+                <label for="sign-up-form">Register</label>
+                <input
+                class="form-control"
+                  type="email"
+                  name="email"
+                  placeholder="email"
+                  id="sign-up-input"
+                />
+                <input class="form-control" type="submit" value="Submit" />
+            </div>
+            </form>
+          </div>
+          </div>
+      </div>
+
+      <div id="after-login" class="container">
+        <div id="display-Summary"  >
+          <!-- Button for deleting summaries/history-->
+          <!-- <button id="summary-delete-button" class="btn btn-primary">Clear History</button> -->
+          <div id="summaryDiv" style="display: none;">History Deleted!</div>
+          <ul id="summaries-ol" class="list-group"></ul>
+        </div>
+      </div>
     </div>
     
-
-    <div id="answer"></div>
+      
+      <div id="pano" class="container"></div>
+      <hr>
+      <div id="answer" class="container"></div>
+      <div id="map" class="container"></div>
+      
+    
+      
+      
+    
+    
+    
     
   </body>
 </html>

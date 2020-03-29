@@ -1,179 +1,124 @@
-a[href^="http://maps.google.com/maps"]{display:none !important}
-a[href^="https://maps.google.com/maps"]{display:none !important}
+a[href^="http://maps.google.com/maps"] {
+  display: none !important;
+}
+a[href^="https://maps.google.com/maps"] {
+  display: none !important;
+}
 
-.gmnoprint a, .gmnoprint span, .gm-style-cc {
-    display:none;
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc {
+  display: none;
 }
 .gmnoprint div {
-    background:none !important;
+  background: none !important;
 }
 
-
-
-
-html, body {
-    background-color: #d4d4b6;
-    height: 100%;
-    width:100%;
-    margin: 0;
-    padding: 0;
-  }
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 .header {
-    padding: 1px;
-    text-align: center;
-    background: #634788;
-    color: #ffffffbd;
-    font-size: 20px;
-    
+  text-align: center;
 }
 
 #pano {
-    display: block;
-    margin: auto;
-    float: center;
-    height: 40%;
-    width: 70%;
-  }
-
-  .container {
-
-    display: flex;
-
-  }
-
-#welcome{
-
-    float: top;
-
+  /* display: block;
+  /* margin: auto;  */
+  height: 50%;
+  width: 100%;
+  
 }
 
-#before-login {
-    display:block;
+#welcome {
+  float: top;
 }
+
 #after-login-navbar {
-    display:none;
-}
-.nav-bar {
-    display:inline-block;
-}
-.nav-content {
-    float: center;
-    display:inline-block;
-    font-size: 18px;
-    margin-right: 5%;
-    padding: 10px;
-    
+  display: none;
 }
 
-.sign-in-user, .sign-up-user {
-    display:inline-block;
-    font-size : 30px;
-    margin: 20px;
-
+.sign-in-user,
+.sign-up-user {
+  display: inline-block;
 }
 
 #after-login {
-    display:block;
+  display: block;
 }
 
-#display-start, #display-Summary, #mapPageButtons {
-    display:none;
+#display-start,
+#display-Summary,
+#mapPageButtons {
+  display: none;
 }
 
-#display-start{
+/* #display-start {
+  margin: auto;
+  margin-top: 20%;
+  box-shadow: 0px 10px 14px -7px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 13px 32px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
+} */
 
-    margin: auto;
-    margin-top: 20%;
-    box-shadow: 0px 10px 14px -7px #276873;
-	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
-	background-color:#599bb3;
-	border-radius:8px;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:20px;
-	font-weight:bold;
-	padding:13px 32px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #3d768a;
+/* #display-start:hover {
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color: #408c99;
+} */
 
-}
+/* #display-start:active {
+  position: relative;
+  top: 1px;
+} */
 
-#display-start:hover {
-	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
-	background-color:#408c99;
-}
-
-#display-start:active {
-	position:relative;
-	top:1px;
-}
-
-#user, #sign-in{
-    display:inline-block
+#user,
+#sign-in {
+  display: inline-block;
 }
 
 #map {
-    margin: auto;
-    display: block;
-    margin: auto;
-    float: center;
-    height: 35%;
-    width: 70%;
+  /* margin: auto;
+  display: block; */
+  height: 32.5%;
+  width: 100%;
+  
 }
 
-#skip {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    font-size: 25px;
-    width: 100px;
-    height: 50px;
-    border: 3px solid #73AD21;
-}
+/* #skip {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  font-size: 25px;
+  width: 100px;
+  height: 50px;
+  border: 3px solid #73ad21;
+} */
+
 #mapPageButtons {
-    margin:auto;
-    float:center;
-    text-align: center;
-    
+  padding-bottom: 2px;
 }
 
-#answer{
-    display:none;
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
+#answer {
+  display: none;
 }
-#submit-button{
-    display:none;
+
+#submit-button {
+  display: none;
 }
 
 
 
-#skip-button, #submit-button{
-    margin:auto;
-    float:center;
-    text-align: center;
-    box-shadow:inset 0px 39px 0px -24px #e67a73;
-	background-color:#e4685d;
-	border-radius:4px;
-	border:1px solid #ffffff;
-	/* display:inline-block; */
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	padding:6px 15px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #b23e35;
-}
 
-
-#skip-button, #submit-button:hover {
-	background-color:#eb675e;
-}
-#skip-button, #submit-button:active {
-	position:relative;
-	top:1px;
-}
