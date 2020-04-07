@@ -1,6 +1,7 @@
 ## Geo Finder
 
 Welcome to Geo Finder! The game that drops you somewhere at random in the world, leaving you to figure out where you are based on the environment, biome, signs, language, and whatever else you can find! 
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/12e1c2a3be8b4d55ab134134ed463c23" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 # Features
 
