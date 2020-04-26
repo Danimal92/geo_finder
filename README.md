@@ -20,7 +20,7 @@ Welcome to Geo Finder! The game that drops you somewhere at random in the world,
 - Register/Login and hit start! 
 - Enjoy!
 
-asdfsadfasdfsadfasdfsadf
+asdfsadfasdfsadfasdfsadfasdasdf
 
 
 
