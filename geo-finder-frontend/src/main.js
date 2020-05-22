@@ -49,11 +49,19 @@ function userLogout() {
       "after-login",
       "after-login-navbar",
       "mapPageButtons",
-      "answer",
-      "display-start"
+      "answer"
+      
     ]);
+    let summaryOl = document.getElementById("summaries-ol")
+    while (summaryOl.firstChild) {
+          summaryOl.firstChild.remove();
+        }
     onlyDisplay(["before-login"]);
+    SUMMARY_DATA = {}
+    let USER_ID = "";
+    let EMAIL = "";
   });
+  
 }
 
 function playButton() {
@@ -61,26 +69,29 @@ function playButton() {
   playDiv.addEventListener("click", ev => {
     ev.preventDefault();
 
-    MARKERA = null;
-    getUser(EMAIL);
+    // MARKERA = null;
+    // getUser(EMAIL);
+    hideEachDisplay(CSS_ID_ARRAY);
+    onlyDisplay(["after-login-navbar", "after-login", "pano", "map", "mapPageButtons","answer"]);
+    
   });
 }
 
-function startClickListener() {
-  let startDiv = document.getElementById("display-start");
-  startDiv.addEventListener("click", () => {
-    TryRandomLocation(HandleCallback);
-    initMap();
-    hideEachDisplay(CSS_ID_ARRAY);
-    onlyDisplay([
-      "after-login-navbar",
-      "after-login",
-      "mapPageButtons",
-      "pano",
-      "map"
-    ]);
-  });
-}
+// function startClickListener() {
+//   let startDiv = document.getElementById("display-start");
+//   startDiv.addEventListener("click", () => {
+//     TryRandomLocation(HandleCallback);
+//     initMap();
+//     hideEachDisplay(CSS_ID_ARRAY);
+//     onlyDisplay([
+//       "after-login-navbar",
+//       "after-login",
+//       "mapPageButtons",
+//       "pano",
+//       "map"
+//     ]);
+//   });
+// }
 
 function nextMapButton() {
   let nextButton = document.getElementById("skip-button");
@@ -92,6 +103,15 @@ function nextMapButton() {
     SUMMARY_DATA = {};
     removeAnswerP();
   });
+}
+
+let nextMapButtonPress = () => {
+    refreshThePageWithNewStreetMap();
+    document.getElementById("submit-button").style.display = "none";
+    MARKERA = null;
+    MARKERB = null;
+    SUMMARY_DATA = {};
+    removeAnswerP();
 }
 
 function submitMapGuess() {

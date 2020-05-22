@@ -33,14 +33,17 @@ function afterLogIn(user) {
   USER_ID = user.id;
   T_POINTS = user.points;
   hideEachDisplay(CSS_ID_ARRAY);
-  onlyDisplay(["after-login-navbar", "after-login", "display-start"]);
+  onlyDisplay(["after-login-navbar", "after-login", "pano", "map", "mapPageButtons"]);
   displayUsername(user);
   displayedUserPoints(user);
+  nextMapButtonPress()
+  
 }
 
 function displayUsername(user) {
   let displayedUser = document.getElementById("welcome");
-  displayedUser.textContent = `Welcome, ${user.email}`;
+  let username = user.email.match(/^(.+)@/)[1]
+  displayedUser.textContent = `Welcome ${username}`;
 }
 function displayedUserPoints(user) {
   let displayedUserPoints = document.getElementById("points");

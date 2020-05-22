@@ -45,18 +45,22 @@ function displaySummaryDivDOM(summariesArray) {
   let displaySummaryDiv = document.getElementById("display-Summary");
   let summaryOl = document.getElementById("summaries-ol");
   if (summariesArray.length === 0) {
-    let summaryDiv = document.createElement("div");
-    summaryDiv.textContent = "No Summary!";
-    displaySummaryDiv.append(summaryDiv);
+    // let summaryDiv = document.getElementById("summaryDiv");
+    // summaryDiv.style = "display: block;"
+    // displaySummaryDiv.append(summaryDiv);
+    let noHistory = document.getElementById("no-history")
+    noHistory.textContent = "No guesses available."
   } else {
+    let noHistory = document.getElementById("no-history")
+      noHistory.textContent = ""
     while (summaryOl.firstChild) {
       summaryOl.firstChild.remove();
     }
     summariesArray.forEach(summary => {
       let summaryLi = document.createElement("li");
       summaryLi.classList = "summaries list-group-item";
-      let summaryP = document.createElement("p");
-      summaryP.innerHTML = `Guessed:${summary.guessed_address}, Actual Address: ${summary.actual_address} , Points Earned: ${summary.points}`;
+      let summaryP = document.createElement("h9");
+      summaryP.textContent = `Guessed: ${summary.guessed_address}, Actual Address: ${summary.actual_address}, Points Earned: ${summary.points}`;
       summaryLi.append(summaryP);
       summaryOl.prepend(summaryLi);
     });
@@ -133,7 +137,7 @@ function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
   let moreCalculation =
     2 * Math.atan2(Math.sqrt(mathCalculation), Math.sqrt(1 - mathCalculation));
   let distanceInKm = radiusOfEarthInKm * moreCalculation;
-  SUMMARY_DATA.points = Math.ceil(25000 / distanceInKm);
+  SUMMARY_DATA.points = Math.ceil(2500000 / distanceInKm);
   SUMMARY_DATA.distance_in_km = Math.floor(distanceInKm);
   SUMMARY_DATA.distance_in_mi = Math.floor(distanceInKm/1.609);
   console.table('calculated',SUMMARY_DATA.distance_in_km,SUMMARY_DATA.distance_in_mi)

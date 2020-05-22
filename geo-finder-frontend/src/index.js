@@ -4,7 +4,6 @@ const SUMMARIES_URL = `${BASE_URL}/summaries`;
 const CSS_ID_ARRAY = new Set([
   "after-login-navbar",
   "before-login",
-  "display-start",
   "display-Summary",
   "pano",
   "map",
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   userLogout();
   viewSummary();
   playButton();
-  startClickListener();
+  // startClickListener();
   nextMapButton();
   submitMapGuess();
 });
