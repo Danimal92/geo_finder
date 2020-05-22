@@ -73,8 +73,7 @@ function placeMarker(location) {
 function compareCoordinates() {
   let answerDiv = document.getElementById("answer");
   answerDiv.style.display = "block";
-  let answerP = document.createElement("h4");
-  console.log("text------------------------text");
+  let answerP = document.createElement("h9");
   setTimeout(function() {
     answerP.textContent =
       "The actual location is " +

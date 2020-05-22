@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>Geo Finder</title>
+    <title>GeoFinder</title>
     <meta name="viewport" content="initial-scale=1.0" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
@@ -42,8 +42,10 @@
   <body>
     
     <nav
+      id="after-login-navbar"
       class="navbar navbar-expand-lg navbar-light">
-      <div id="after-login-navbar" class="container">
+      <div  class="container">
+      
         
         <button
           class="navbar-toggler"
@@ -70,21 +72,24 @@
               <div id="points" class="nav-item nav-link" href="#">Points</div>
             </div>
             <a class="nav-item nav-link" data-toggle="modal" data-target="#aboutModal" href="#">
-              About
+              Rules
             </a>
           </div>
           <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="aboutModalLabel">About GeoFinder</h5>
+                  <h5 class="modal-title" id="aboutModalLabel">Rules</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">
-                  GeoFinder is a game where you are dropped in a random place in the world, and you need to guess where you are!
-                  Rules are simple: Look at the panorama and try to guess where you are! Use the world map below it to make a guess. Then hit submit when you're sure and see how far(or close) you were! Have fun!
+                <div class="modal-body" style="text-align: left;">
+                  GeoFinder is a game where you are dropped in a random place in the world, and you need to guess where you are!<br><br>
+                  Rules are simple: Look at the panorama and try to guess where you are! Use the world map below it to make a guess.<br><br>
+                  Then hit submit when you're sure and see how close(or far) you were!<br><br>
+                  
+                  Have fun!
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -96,21 +101,16 @@
         </div>
       </div>
     </nav>
-    <div class="container">
+
+    <!-- <div class="container">
+      <div class="row justify-content-between">
       <button id="display-start" class="btn btn-primary">
         <div>Start</div>
       </button>
-    </div>
-    <div id="mapPageButtons" class="container">
-      <div class="row">
-        <div class="col">
-          <button id="skip-button" class="btn btn-warning">Next</button>
-        </div>
-        <div class="col">
-          <button id="submit-button" class="btn btn-success">Submit</button>
-        </div>
       </div>
-    </div>
+    </div> -->
+
+    
   
 
     <div id="display-pane" class="container">
@@ -121,8 +121,8 @@
             <p class="lead">Guess where you are in the world!</p>
           </div>
         </div>
-        <div >
-          <div class="sign-in-user">
+        <div class="container" >
+          <div class="form-row sign-in-user">
             <form id="sign-in-form">
               <div class="form-group">
                 <label for="sign-in-form">Login</label>
@@ -133,11 +133,11 @@
                   placeholder="email"
                   id="sign-in-input"
                 />
-                <input class="form-control" type="submit" value="Submit" />
+                <button class="form-control" type="submit" value="Submit" />Sign in</button>
               </div>
             </form>
           </div>
-          <div class="sign-up-user">
+          <div class="form-row sign-up-user">
             <div class="form-group">
               <form id="sign-up-form">
                 <label for="sign-up-form">Register</label>
@@ -148,7 +148,7 @@
                   placeholder="email"
                   id="sign-up-input"
                 />
-                <input class="form-control" type="submit" value="Submit" />
+                <button class="form-control" type="submit" value="Submit" />Register</button>
             </div>
             </form>
           </div>
@@ -157,9 +157,10 @@
 
       <div id="after-login" class="container">
         <div id="display-Summary"  >
+          <h9 id="no-history"></h9>
           <!-- Button for deleting summaries/history-->
           <!-- <button id="summary-delete-button" class="btn btn-primary">Clear History</button> -->
-          <div id="summaryDiv" style="display: none;">History Deleted!</div>
+          <div id="summaryDiv" style="display: none;"></div>
           <ul id="summaries-ol" class="list-group"></ul>
         </div>
       </div>
@@ -167,6 +168,16 @@
     
       
       <div id="pano" class="container"></div>
+      <div id="mapPageButtons" class="container">
+        <div class="row justify-content-between">
+          <div >
+            <button id="skip-button" class="btn btn-warning">Next</button>
+          </div>
+          <div >
+            <button id="submit-button" class="btn btn-success">Submit</button>
+          </div>
+        </div>
+      </div>
       <hr>
       <div id="answer" class="container"></div>
       <div id="map" class="container"></div>
