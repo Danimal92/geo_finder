@@ -45,8 +45,7 @@ function TryRandomLocation(callback) {
 
 
 const test = () => {
-  //test
-  //test
+  
 }
 
 function HandleCallback(data, status) {
