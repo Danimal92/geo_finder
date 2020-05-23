@@ -44,9 +44,7 @@ function TryRandomLocation(callback) {
 }
 
 
-const test = () => {
-  
-}
+
 
 function HandleCallback(data, status) {
   if (status === "OK") {
