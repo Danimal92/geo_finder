@@ -43,6 +43,11 @@ function TryRandomLocation(callback) {
   );
 }
 
+
+const test = () => {
+  //test
+}
+
 function HandleCallback(data, status) {
   if (status === "OK") {
     let latitude = data.location.latLng.lat();
