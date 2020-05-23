@@ -4,10 +4,7 @@ function viewSummary() {
   let summaryDiv = document.getElementById("summary");
   summaryDiv.addEventListener("click", ev => {
     ev.preventDefault();
-    // if (!CLICK_CHECK.has("summary-view-button")){
-    //     CLICK_CHECK.add("summary-view-button")
     getUserSummary(USER_ID);
-    // }
   });
 }
 
